@@ -33,5 +33,41 @@ ls -a =see hidden files
   rm -rf .git to delete file
 
 
-  git (commands)
-  
+  git (commands) (how to set up a git folder and files step by step)
+  touch main.rb passwords.txt
+
+touch .gitignore private files
+
+passwords.txt -private so put into gitignore
+
+git add . -add to git
+
+git commit -m 'create files'
+
+before adding commit check your work, no errors, does work
+  git commit -m 'create file' 
+finish the ___ file
+
+(in main.rb)
+def puts_git(cmd)
+  puts `git #{cmd} -h`
+  menu
+end
+def menu
+  puts '1: Enter git command'
+  puts '2: Exit'
+  choice = gets.to_i
+  case choice
+  when 1
+    puts 'Enter git command'
+    puts_git(gets.strip)
+    menu
+  when 2
+    exit
+  else
+    puts 'Invalid choice'
+    menu
+  end
+end
+menu
+
